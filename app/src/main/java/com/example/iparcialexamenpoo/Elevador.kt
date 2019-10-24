@@ -23,7 +23,7 @@ class Elevador ( private var PisoA: Int, private var PisoD: Int, private var est
         }
     }
 fun bajar(PisoA: Int,PisoD: Int){
-    println("Usted esta en $PisoA")
+    println("Usted esta en el piso $PisoA")
     var PisoE = PisoA
     while (PisoE > PisoD){
         PisoE--
@@ -33,7 +33,7 @@ fun bajar(PisoA: Int,PisoD: Int){
     println("El elevador ha llegado al piso indicado")
 }
     fun subir(PisoA: Int,PisoD: Int){
-        println("Usted esta en $PisoA")
+        println("Usted esta en el piso $PisoA")
         var PisoE = PisoA
         while (PisoE < PisoD){
             PisoE++

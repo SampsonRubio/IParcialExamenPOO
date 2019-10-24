@@ -43,16 +43,18 @@ fun AccionesElevador(){
         menuPisos()
     }
     if(pisoDestino > pisoProcedencia){
-        val elevadorUno = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.ARRIBA)
+        var elevadorUno = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.ARRIBA)
         elevadorUno.estadoElevador()
+
     }
     if(pisoDestino < pisoProcedencia){
-        val elevadorDos = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.ABAJO)
+        var elevadorDos = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.ABAJO)
         elevadorDos.estadoElevador()
     }
     if(pisoDestino == 0 || pisoProcedencia == 0){
-        val elevadorTres = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.DETENIDO)
+        var elevadorTres = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.DETENIDO)
         elevadorTres.estadoElevador()
+
     }
 
 
@@ -64,15 +66,20 @@ fun main()
     var opt = 0
     menu()
     while (opt != 2){
+    if (opt == 1) {
+        AccionesElevador()
+        menu()
         opt = readLine()!!.toInt()
-        when (opt) {
-            1 -> AccionesElevador()
-            2 -> println("Adios")
-        else -> {
-            println("Debe escoger solo las opciones mostradas")
-            menu()
-            opt = readLine()!!.toInt()
-            }
+    }
+    if (opt == 2){
+        println("Adios")
+    }else{
+        println("Debe escoger solo las opciones mostradas")
+        menu()
+        opt = readLine()!!.toInt()
+    }
+
+
         }
     }
 }
