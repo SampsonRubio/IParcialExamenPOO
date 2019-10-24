@@ -44,12 +44,15 @@ fun AccionesElevador(){
     }
     if(pisoDestino > pisoProcedencia){
         val elevadorUno = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.ARRIBA)
+        elevadorUno.estadoElevador()
     }
     if(pisoDestino < pisoProcedencia){
         val elevadorDos = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.ABAJO)
+        elevadorDos.estadoElevador()
     }
     if(pisoDestino == 0 || pisoProcedencia == 0){
         val elevadorTres = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.DETENIDO)
+        elevadorTres.estadoElevador()
     }
 
 
