@@ -49,7 +49,7 @@ fun AccionesElevador(){
         val elevadorDos = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.ABAJO)
     }
     if(pisoDestino == 0 || pisoProcedencia == 0){
-        val elevadorDos = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.DETENIDO)
+        val elevadorTres = Elevador(pisoProcedencia,pisoDestino,EstadosElevador.DETENIDO)
     }
 
 
@@ -59,7 +59,7 @@ fun AccionesElevador(){
 fun main()
 {
     var opt = 0
-
+    menu()
     while (opt != 2){
         opt = readLine()!!.toInt()
         when (opt) {
