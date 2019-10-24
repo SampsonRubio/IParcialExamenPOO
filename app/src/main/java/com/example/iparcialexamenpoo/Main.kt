@@ -66,7 +66,7 @@ fun main()
     var opt = 0
     menu()
     opt = readLine()!!.toInt()
-    while (opt != 2){
+
     if (opt == 1) {
         AccionesElevador()
         menu()
@@ -81,5 +81,5 @@ fun main()
     }
 
 
-        }
 }
+
